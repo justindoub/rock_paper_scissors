@@ -44,6 +44,7 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection === "scissors" && computerSelection === "paper" ) {
         return "You win! Scissors beat paper.";
     }
+    else return "You didn't say rock, paper, or scissors. What kind of scam are you trying to run?";
   }   
 
 //play 5 rounds
