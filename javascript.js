@@ -10,7 +10,16 @@ function computerPlay() {
     else return "scissors";
 }
 
+//player will choose rock, paper, or scissors
+let rock
+let paper
+let scissors
+
+let playerPlay = prompt("What's your play? Rock, paper, or scissors?")
+
 //compare computer and human plays and return a result
+
+// I think I'm not using .toLowerCase correctly here.
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection ) {
@@ -35,8 +44,13 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection === "scissors" && computerSelection === "paper" ) {
         return "You win! Scissors beat paper.";
     }
-  } 
-  
-  const playerSelection = "scissors";
+  }   
+
+//play 5 rounds
+for (let i = 0; i < 5; i++) {
+    // your code here!
+ }
+
+  const playerSelection = playerPlay;
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
