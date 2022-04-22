@@ -15,7 +15,7 @@ let rock
 let paper
 let scissors
 
-let playerPlay = prompt("What's your play? Rock, paper, or scissors?")
+let playerPlay = prompt("What's your play? Rock, paper, or scissors?").toLowerCase()
 
 //compare computer and human plays and return a result
 
