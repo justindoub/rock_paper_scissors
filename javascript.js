@@ -19,10 +19,9 @@ function computerPlay() {
 
  //compare computer and human play, add score, and return a result 
  function playRound() {
-     let playerSelection = playerPlay();
+     let playerSelection = playerPlay();  
      let computerSelection = computerPlay();
-     //let computerScore = 0;
-     //let playerScore = 0;
+ 
      if (playerSelection == computerSelection ) {
         console.log("Computer: " + computerSelection);
         console.log("It's a tie!");
@@ -50,7 +49,6 @@ function computerPlay() {
         console.log("You: " + playerScore + " Computer: " + computerScore);
         return playerScore + 1;
      }
- 
      else if (playerSelection === "paper" && computerSelection === "scissors") {
         console.log("Computer: scissors"); 
         console.log("You lose the round! Scissors beat paper.");
@@ -84,15 +82,15 @@ function game() {
     //play 5 rounds and determine a winner
     for (let i = 0; i < 5; i++) {
         playRound();
-        //if ( i == 5 && playerScore > computerScore) {
-        //    console.log("You win the game!");
-        //}
-       // else if ( i == 5 && computerScore > playerScore ) {
-       //     console.log("You lose the game. Try again.");
-       // }
-        //else  if ( i == 5 ) {
-        //    console.log("It's a tie. Try again.");
-       // }
+        if ( i == 4 && (playerScore > computerScore)) {
+           console.log("You win the game!");
+         }
+         else if ( i == 4 && (computerScore > playerScore )) {
+            console.log("You lose the game. Try again.");
+         }
+         else  if ( i == 4 ) {
+            console.log("It's a tie. Try again.");
+        }
     }
 }
 
@@ -101,9 +99,3 @@ let playerScore = 0;
 let computerScore = 0;
 
 game();
-
-//play 5 rounds
- //for (let i = 0; i < 5; i++) {
- //    if (i < 5) {(console.log(playRound())) && computerSelection()};
-    
- //}
